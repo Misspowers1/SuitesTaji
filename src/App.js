@@ -8,11 +8,14 @@ import Order from "./pages/Order";
 import BookRoom from "./pages/BookRoom";
 import CheckAvailability from "./components/CheckAvailability";
 import About from "./pages/About";
+import Slider from "./components/Slider";
+import Gallery from "./pages/Gallery";
+import Contact from "./pages/Contact";
 
 function App() {
 	return (
 		<div>
-			<Home />
+			<Contact />
 		</div>
 	);
 }

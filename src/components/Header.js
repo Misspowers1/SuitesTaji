@@ -69,7 +69,7 @@ const Header = () => {
 						<List>Rooms</List>
 					</Link>
 					<Link href="/">
-						<List>Facilities</List>
+						<List>Gallery</List>
 					</Link>
 					<Link href="/">
 						<List>About</List>
