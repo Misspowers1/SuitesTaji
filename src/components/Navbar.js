@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Outlet, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const Container = styled.div``;
 
@@ -34,6 +35,7 @@ const List = styled.ul`
 	font-weight: 400;
 	cursor: pointer;
 	color: white;
+	decoration: none;
 `;
 
 const Right = styled.div``;
@@ -60,19 +62,19 @@ const Navbar = () => {
 					<Image src="/images/Taji Suites.png" />
 				</Logo>
 				<Center>
-					<Link to="/home">
+					<Link to="/home" style={{ textDecoration: "none" }}>
 						<List>Home</List>
 					</Link>
-					<Link to="/bookroom">
+					<Link to="/bookroom" style={{ textDecoration: "none" }}>
 						<List>Rooms</List>
 					</Link>
-					<Link to="/gallery">
+					<Link to="/gallery" style={{ textDecoration: "none" }}>
 						<List>Gallery</List>
 					</Link>
-					<Link to="/about">
+					<Link to="/about" style={{ textDecoration: "none" }}>
 						<List>About</List>
 					</Link>
-					<Link to="/contact">
+					<Link to="/contact" style={{ textDecoration: "none" }}>
 						<List>Contact us</List>
 					</Link>
 				</Center>

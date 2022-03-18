@@ -65,6 +65,7 @@ const ContactIn = styled.div`
 
 const Icons = styled.div`
 	margin-left: 100px;
+	cursor: pointer;
 `;
 const FormContainer = styled.form`
 	flex: 1;

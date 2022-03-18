@@ -13,8 +13,13 @@ const rootElement = document.getElementById("root");
 render(
 	<BrowserRouter>
 		<Routes>
-			<Route path="/" element={<App />} />
+			<Route path="/" element={<Home />} />
 			<Route path="/home" element={<Home />} />
+			<Route path="/bookroom" element={<BookRoom />} />
+			<Route path="/gallery" element={<Gallery />} />
+			<Route path="/about" element={<About />} />
+			<Route path="/Contact" element={<Contact />} />
+			<Route path="/order" element={<Order />} />
 		</Routes>
 	</BrowserRouter>,
 	rootElement

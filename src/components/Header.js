@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const Container = styled.div``;
 
@@ -59,19 +59,19 @@ const Header = () => {
 					<Image src="/images/Taji Suites.png" />
 				</Logo>
 				<Center>
-					<Link to="/home">
+					<Link to="/home" style={{ textDecoration: "none" }}>
 						<List>Home</List>
 					</Link>
-					<Link href="/">
+					<Link to="/bookroom" style={{ textDecoration: "none" }}>
 						<List>Rooms</List>
 					</Link>
-					<Link href="/">
+					<Link to="/gallery" style={{ textDecoration: "none" }}>
 						<List>Gallery</List>
 					</Link>
-					<Link href="/">
+					<Link to="/about" style={{ textDecoration: "none" }}>
 						<List>About</List>
 					</Link>
-					<Link href="/">
+					<Link to="/contact" style={{ textDecoration: "none" }}>
 						<List>Contact us</List>
 					</Link>
 				</Center>

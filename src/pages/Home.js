@@ -391,214 +391,209 @@ const Home = () => {
 	return (
 		<Container>
 			<Head>
-				<h1>EDNA</h1>
+				<Navbar />
+				<Middle>
+					<Texts>
+						<Text>Taji Suites</Text>
+						<Text>Regal And Breathtaking.</Text>
+						<Butt>
+							<Explore>EXPLORE</Explore>
+						</Butt>
+					</Texts>
+				</Middle>
+				<CheckAvailability />
 			</Head>
+			<Wrapper>
+				<Title>Our Rooms</Title>
+				<Rooms>
+					<ImageContainer>
+						<Image1 src="/images/image7.jpeg" />
+						<Book>STANDARD ROOM </Book>
+					</ImageContainer>
+					<ImageContainer>
+						<Image1 src="/images/image6.jpeg" />
+						<Book>DELUXE ROOM </Book>
+					</ImageContainer>
+					<ImageContainer>
+						<Image1 src="/images/image7.jpeg" />
+						<Book>STANDARD ROOM </Book>
+					</ImageContainer>
+					<ImageContainer>
+						<Image1 src="/images/image9.jpeg" />
+						<Book>STANDARD ROOM </Book>
+					</ImageContainer>
+					<ImageContainer>
+						<Image1 src="/images/image6.jpeg" />
+						<Book>DELUXE ROOM </Book>
+					</ImageContainer>
+					<ImageContainer>
+						<Image1 src="/images/image9.jpeg" />
+						<Book>STANDARD ROOM </Book>
+					</ImageContainer>
+				</Rooms>
+			</Wrapper>
+			<BestRoom>
+				<RoomImage src="/images/image9.jpeg" />
+				<Info>
+					<Tittle>
+						Check out your
+						<br /> Best Room.
+					</Tittle>
+					<Desc>
+						TAJI Suites offers you affordable, elegant and comfortable
+						accomodation with a unique blend of taste and ambience.
+					</Desc>
+					<BookNow>Book Now</BookNow>
+				</Info>
+			</BestRoom>
+			<Services>
+				<Main>Our Services</Main>
+				<Service>
+					<Icons>
+						<Icon src="/images/restaurant.png" />
+						<Rest>Restaurant</Rest>
+						<Descript>
+							Our retaurant delights in authentic African dishes cooked to
+							perfection.
+						</Descript>
+					</Icons>
+					<Icons>
+						<Icon src="/images/acommodation.png" />
+						<Rest>Accomodation</Rest>
+						<Descript>
+							TAJI Suites offers you affordable, elegant and comfortable
+							accomodation with a unique blend of taste and ambience.
+						</Descript>
+					</Icons>
+					<Icons>
+						<Icon src="/images/conferenceroom.png" />
+						<Rest>Conferencing</Rest>
+						<Descript>
+							TAJI Suites offers you affordable, elegant and comfortable
+							accomodation with a unique blend of taste and ambience.
+						</Descript>
+					</Icons>
+				</Service>
+			</Services>
+			<MoreInfo>
+				<ImageDiv>
+					<Comfy src="/images/image9.jpeg" />
+				</ImageDiv>
+				<InfoContainer>
+					<Heading>
+						Find Your Best
+						<br /> Room Here
+					</Heading>
+					<InfoDesc>
+						{" "}
+						Enjoy all the luxury and comfort you have come to expect from TAJI
+						Suites Rooms. Designed as an ideal space for work and relaxation
+						alike, but equally useful for those evenings you'd rather relax in
+						your comfortable room.
+					</InfoDesc>
+					<InfoDesc>
+						TAJI Suites offers you affordable, elegant and comfortable
+						accomodation with a unique blend of taste and ambience.
+					</InfoDesc>
+					<InfoButton>Read More</InfoButton>
+				</InfoContainer>
+			</MoreInfo>
+			<FacilitiesTitle>Facilities</FacilitiesTitle>
+			<Facilities>
+				<IconInfo>
+					<IconLabel>
+						<LocalParkingOutlined style={{ fontSize: "50px" }} />
+					</IconLabel>
+					<IconTitle>Free Parking</IconTitle>
+				</IconInfo>
+				<IconInfo>
+					<IconLabel>
+						<AttachMoney style={{ fontSize: "50px" }} />
+					</IconLabel>
+					<IconTitle>Best Prices</IconTitle>
+				</IconInfo>
+				<IconInfo>
+					<IconLabel>
+						<Security style={{ fontSize: "50px" }} />
+					</IconLabel>
+					<IconTitle>Good Security</IconTitle>
+				</IconInfo>
+				<IconInfo>
+					<IconLabel>
+						<Hotel style={{ fontSize: "50px" }} />
+					</IconLabel>
+					<IconTitle>Modern Standard And Deluxe Rooms</IconTitle>
+				</IconInfo>
+				<IconInfo>
+					<IconLabel>
+						<LocationOn style={{ fontSize: "50px" }} />
+					</IconLabel>
+					<IconTitle>Downtown Location</IconTitle>
+				</IconInfo>
+				<IconInfo>
+					<IconLabel>
+						<RoomService style={{ fontSize: "50px" }} />
+					</IconLabel>
+					<IconTitle>Exclusive Services</IconTitle>
+				</IconInfo>
+				<IconInfo>
+					<IconLabel>
+						<Wifi style={{ fontSize: "50px" }} />
+					</IconLabel>
+					<IconTitle>Free High Speed Wi-fi</IconTitle>
+				</IconInfo>
+				<IconInfo>
+					<IconLabel>
+						<Visibility style={{ fontSize: "50px" }} />
+					</IconLabel>
+					<IconTitle>Captivating View Of Kisumu City</IconTitle>
+				</IconInfo>
+			</Facilities>
+			<Testimonials>
+				<GuestHeader>From The Guest</GuestHeader>
+				<GuestSay>
+					❝ Enjoy all the luxury and comfort you have come to expect from TAJI
+					Suites Rooms. Designed as an ideal space for work and relaxation
+					alike, but equally useful for those evenings you'd rather relax in
+					your comfortable room.TAJI Suites offers you affordable, elegant and
+					comfortable accomodation with a unique blend of taste and ambience.❞
+				</GuestSay>
+				<GuestDetail>
+					<GuestP>
+						<GuestPhoto src="/images/guest1.jpeg" />
+					</GuestP>
+					<GuestDetails>
+						<GuestName>Purity Akoth</GuestName>
+						<GuestLocation>From Kenya, Kisumu</GuestLocation>
+					</GuestDetails>
+				</GuestDetail>
+			</Testimonials>
+			<Video>
+				<VideoImage src="/images/gazibo.jpeg" />
+				<VideoDesc>Keep Calm And Enjoy Your Stay.</VideoDesc>
+			</Video>
+			<OrderFood>
+				<FoodDetails>
+					<Food src="/images/food1.jpeg" />
+					<FoodDesc>Ugali, Sukuma + Meat</FoodDesc>
+					<OrderButton>Order Now</OrderButton>
+				</FoodDetails>
+				<FoodDetails>
+					<Food
+						src="/images/food7.jpeg"
+						style={{ height: "300px", width: "300px", objectFit: "cover" }}
+					/>
+					<FoodDesc>Ugali, Sukuma + Meat</FoodDesc>
+					<OrderButton>Order Now</OrderButton>
+				</FoodDetails>
+				<FoodDetails>
+					<Food src="/images/food2.jpeg" />
+					<FoodDesc>Ugali, Sukuma + Meat</FoodDesc>
+					<OrderButton>Order Now</OrderButton>
+				</FoodDetails>
+			</OrderFood>
+			<Footer />
 		</Container>
-		// <Container>
-		// 	<Head>
-		// 		<Navbar />
-		// 		<Middle>
-		// 			<Texts>
-		// 				<Text>Taji Suites</Text>
-		// 				<Text>Regal And Breathtaking.</Text>
-		// 				<Butt>
-		// 					<Explore>EXPLORE</Explore>
-		// 				</Butt>
-		// 			</Texts>
-		// 		</Middle>
-		// 		<CheckAvailability />
-		// 	</Head>
-		// 	<Wrapper>
-		// 		<Title>Our Rooms</Title>
-		// 		<Rooms>
-		// 			<ImageContainer>
-		// 				<Image1 src="/images/image7.jpeg" />
-		// 				<Book>STANDARD ROOM </Book>
-		// 			</ImageContainer>
-		// 			<ImageContainer>
-		// 				<Image1 src="/images/image6.jpeg" />
-		// 				<Book>DELUXE ROOM </Book>
-		// 			</ImageContainer>
-		// 			<ImageContainer>
-		// 				<Image1 src="/images/image7.jpeg" />
-		// 				<Book>STANDARD ROOM </Book>
-		// 			</ImageContainer>
-		// 			<ImageContainer>
-		// 				<Image1 src="/images/image9.jpeg" />
-		// 				<Book>STANDARD ROOM </Book>
-		// 			</ImageContainer>
-		// 			<ImageContainer>
-		// 				<Image1 src="/images/image6.jpeg" />
-		// 				<Book>DELUXE ROOM </Book>
-		// 			</ImageContainer>
-		// 			<ImageContainer>
-		// 				<Image1 src="/images/image9.jpeg" />
-		// 				<Book>STANDARD ROOM </Book>
-		// 			</ImageContainer>
-		// 		</Rooms>
-		// 	</Wrapper>
-		// 	<BestRoom>
-		// 		<RoomImage src="/images/image9.jpeg" />
-		// 		<Info>
-		// 			<Tittle>
-		// 				Check out your
-		// 				<br /> Best Room.
-		// 			</Tittle>
-		// 			<Desc>
-		// 				TAJI Suites offers you affordable, elegant and comfortable
-		// 				accomodation with a unique blend of taste and ambience.
-		// 			</Desc>
-		// 			<BookNow>Book Now</BookNow>
-		// 		</Info>
-		// 	</BestRoom>
-		// 	<Services>
-		// 		<Main>Our Services</Main>
-		// 		<Service>
-		// 			<Icons>
-		// 				<Icon src="/images/restaurant.png" />
-		// 				<Rest>Restaurant</Rest>
-		// 				<Descript>
-		// 					Our retaurant delights in authentic African dishes cooked to
-		// 					perfection.
-		// 				</Descript>
-		// 			</Icons>
-		// 			<Icons>
-		// 				<Icon src="/images/acommodation.png" />
-		// 				<Rest>Accomodation</Rest>
-		// 				<Descript>
-		// 					TAJI Suites offers you affordable, elegant and comfortable
-		// 					accomodation with a unique blend of taste and ambience.
-		// 				</Descript>
-		// 			</Icons>
-		// 			<Icons>
-		// 				<Icon src="/images/conferenceroom.png" />
-		// 				<Rest>Conferencing</Rest>
-		// 				<Descript>
-		// 					TAJI Suites offers you affordable, elegant and comfortable
-		// 					accomodation with a unique blend of taste and ambience.
-		// 				</Descript>
-		// 			</Icons>
-		// 		</Service>
-		// 	</Services>
-		// 	<MoreInfo>
-		// 		<ImageDiv>
-		// 			<Comfy src="/images/image9.jpeg" />
-		// 		</ImageDiv>
-		// 		<InfoContainer>
-		// 			<Heading>
-		// 				Find Your Best
-		// 				<br /> Room Here
-		// 			</Heading>
-		// 			<InfoDesc>
-		// 				{" "}
-		// 				Enjoy all the luxury and comfort you have come to expect from TAJI
-		// 				Suites Rooms. Designed as an ideal space for work and relaxation
-		// 				alike, but equally useful for those evenings you'd rather relax in
-		// 				your comfortable room.
-		// 			</InfoDesc>
-		// 			<InfoDesc>
-		// 				TAJI Suites offers you affordable, elegant and comfortable
-		// 				accomodation with a unique blend of taste and ambience.
-		// 			</InfoDesc>
-		// 			<InfoButton>Read More</InfoButton>
-		// 		</InfoContainer>
-		// 	</MoreInfo>
-		// 	<FacilitiesTitle>Facilities</FacilitiesTitle>
-		// 	<Facilities>
-		// 		<IconInfo>
-		// 			<IconLabel>
-		// 				<LocalParkingOutlined style={{ fontSize: "50px" }} />
-		// 			</IconLabel>
-		// 			<IconTitle>Free Parking</IconTitle>
-		// 		</IconInfo>
-		// 		<IconInfo>
-		// 			<IconLabel>
-		// 				<AttachMoney style={{ fontSize: "50px" }} />
-		// 			</IconLabel>
-		// 			<IconTitle>Best Prices</IconTitle>
-		// 		</IconInfo>
-		// 		<IconInfo>
-		// 			<IconLabel>
-		// 				<Security style={{ fontSize: "50px" }} />
-		// 			</IconLabel>
-		// 			<IconTitle>Good Security</IconTitle>
-		// 		</IconInfo>
-		// 		<IconInfo>
-		// 			<IconLabel>
-		// 				<Hotel style={{ fontSize: "50px" }} />
-		// 			</IconLabel>
-		// 			<IconTitle>Modern Standard And Deluxe Rooms</IconTitle>
-		// 		</IconInfo>
-		// 		<IconInfo>
-		// 			<IconLabel>
-		// 				<LocationOn style={{ fontSize: "50px" }} />
-		// 			</IconLabel>
-		// 			<IconTitle>Downtown Location</IconTitle>
-		// 		</IconInfo>
-		// 		<IconInfo>
-		// 			<IconLabel>
-		// 				<RoomService style={{ fontSize: "50px" }} />
-		// 			</IconLabel>
-		// 			<IconTitle>Exclusive Services</IconTitle>
-		// 		</IconInfo>
-		// 		<IconInfo>
-		// 			<IconLabel>
-		// 				<Wifi style={{ fontSize: "50px" }} />
-		// 			</IconLabel>
-		// 			<IconTitle>Free High Speed Wi-fi</IconTitle>
-		// 		</IconInfo>
-		// 		<IconInfo>
-		// 			<IconLabel>
-		// 				<Visibility style={{ fontSize: "50px" }} />
-		// 			</IconLabel>
-		// 			<IconTitle>Captivating View Of Kisumu City</IconTitle>
-		// 		</IconInfo>
-		// 	</Facilities>
-		// 	<Testimonials>
-		// 		<GuestHeader>From The Guest</GuestHeader>
-		// 		<GuestSay>
-		// 			❝ Enjoy all the luxury and comfort you have come to expect from TAJI
-		// 			Suites Rooms. Designed as an ideal space for work and relaxation
-		// 			alike, but equally useful for those evenings you'd rather relax in
-		// 			your comfortable room.TAJI Suites offers you affordable, elegant and
-		// 			comfortable accomodation with a unique blend of taste and ambience.❞
-		// 		</GuestSay>
-		// 		<GuestDetail>
-		// 			<GuestP>
-		// 				<GuestPhoto src="/images/guest1.jpeg" />
-		// 			</GuestP>
-		// 			<GuestDetails>
-		// 				<GuestName>Purity Akoth</GuestName>
-		// 				<GuestLocation>From Kenya, Kisumu</GuestLocation>
-		// 			</GuestDetails>
-		// 		</GuestDetail>
-		// 	</Testimonials>
-		// 	<Video>
-		// 		<VideoImage src="/images/gazibo.jpeg" />
-		// 		<VideoDesc>Keep Calm And Enjoy Your Stay.</VideoDesc>
-		// 	</Video>
-		// 	<OrderFood>
-		// 		<FoodDetails>
-		// 			<Food src="/images/food1.jpeg" />
-		// 			<FoodDesc>Ugali, Sukuma + Meat</FoodDesc>
-		// 			<OrderButton>Order Now</OrderButton>
-		// 		</FoodDetails>
-		// 		<FoodDetails>
-		// 			<Food
-		// 				src="/images/food7.jpeg"
-		// 				style={{ height: "300px", width: "300px", objectFit: "cover" }}
-		// 			/>
-		// 			<FoodDesc>Ugali, Sukuma + Meat</FoodDesc>
-		// 			<OrderButton>Order Now</OrderButton>
-		// 		</FoodDetails>
-		// 		<FoodDetails>
-		// 			<Food src="/images/food2.jpeg" />
-		// 			<FoodDesc>Ugali, Sukuma + Meat</FoodDesc>
-		// 			<OrderButton>Order Now</OrderButton>
-		// 		</FoodDetails>
-		// 	</OrderFood>
-		// 	<Footer />
-		// </Container>
 	);
 };
 
