@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom"
 
 const Container = styled.div``;
 
@@ -26,10 +27,6 @@ const Center = styled.div`
 	flex: 2;
 	display: flex;
 	text-align: center;
-`;
-
-const Link = styled.a`
-	text-decoration: none;
 `;
 
 const List = styled.ul`
@@ -62,7 +59,7 @@ const Header = () => {
 					<Image src="/images/Taji Suites.png" />
 				</Logo>
 				<Center>
-					<Link href="/">
+					<Link to="/home">
 						<List>Home</List>
 					</Link>
 					<Link href="/">

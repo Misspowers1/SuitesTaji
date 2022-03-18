@@ -90,8 +90,9 @@ const Footer = () => {
 				</Left>
 				<Center>
 					<Links>Quick Links</Links>
-					<List>Accomodation</List>
-					<List>Food & Drinks</List>
+					<List>Rooms</List>
+					<List>Food</List>
+					<List>Drinks</List>
 					<List>Conference Room</List>
 				</Center>
 				<Right>

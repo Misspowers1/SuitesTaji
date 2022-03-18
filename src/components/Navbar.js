@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Outlet, Link } from "react-router-dom";
 
 const Container = styled.div``;
 
@@ -35,10 +36,6 @@ const List = styled.ul`
 	color: white;
 `;
 
-const Link = styled.a`
-	text-decoration: none;
-`;
-
 const Right = styled.div``;
 
 const Button = styled.button`
@@ -63,19 +60,19 @@ const Navbar = () => {
 					<Image src="/images/Taji Suites.png" />
 				</Logo>
 				<Center>
-					<Link href="/">
+					<Link to="/home">
 						<List>Home</List>
 					</Link>
-					<Link href="/">
+					<Link to="/bookroom">
 						<List>Rooms</List>
 					</Link>
-					<Link href="/">
+					<Link to="/gallery">
 						<List>Gallery</List>
 					</Link>
-					<Link href="/">
+					<Link to="/about">
 						<List>About</List>
 					</Link>
-					<Link href="/">
+					<Link to="/contact">
 						<List>Contact us</List>
 					</Link>
 				</Center>
@@ -83,6 +80,7 @@ const Navbar = () => {
 					<Button>Reservation</Button>
 				</Right>
 			</Nav>
+			<Outlet />
 		</Container>
 	);
 };
