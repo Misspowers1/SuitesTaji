@@ -13,6 +13,7 @@ import {
 	Visibility,
 	Wifi,
 } from "@material-ui/icons";
+import { mobile } from "../responsive";
 
 const Container = styled.div``;
 
@@ -35,6 +36,8 @@ const Text = styled.h1`
 	font-weight: 500;
 	margin: 12px 0px;
 	color: white;
+
+	${mobile({ fontSize: "30px" })}
 `;
 
 const Butt = styled.div`
@@ -52,6 +55,11 @@ const Explore = styled.button`
 	border-radius: 24px;
 	background: white;
 	color: #ffc60;
+
+	&:hover {
+		background: #ffd500;
+		color: white;
+	}
 `;
 
 const Wrapper = styled.div`

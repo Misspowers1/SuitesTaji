@@ -76,7 +76,9 @@ const Header = () => {
 					</Link>
 				</Center>
 				<Right>
-					<Button>Reservation</Button>
+					<Link to="/contact" style={{ textDecoration: "none" }}>
+						<Button>Reservation</Button>
+					</Link>
 				</Right>
 			</Navbar>
 		</Container>

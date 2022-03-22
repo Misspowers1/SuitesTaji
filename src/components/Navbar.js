@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { Outlet, Link } from "react-router-dom";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { mobile } from "../responsive";
 
-const Container = styled.div``;
+const Container = styled.div`
+	${mobile({ display: "none" })}
+`;
 
 const Nav = styled.div`
 	display: flex;
@@ -79,7 +81,9 @@ const Navbar = () => {
 					</Link>
 				</Center>
 				<Right>
-					<Button>Reservation</Button>
+					<Link to="/contact" style={{ textDecoration: "none" }}>
+						<Button>Reservation</Button>
+					</Link>
 				</Right>
 			</Nav>
 			<Outlet />
