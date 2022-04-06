@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import { Link } from "react-router-dom";
 import CheckAvailability from "../components/CheckAvailability";
 import {
 	AttachMoney,
@@ -22,6 +23,8 @@ const Head = styled.div`
 	height: 100vh;
 	background-repeat: no-repeat;
 	background-size: cover;
+
+	${mobile({ height: "50vh" })}
 `;
 
 const Middle = styled.div``;
@@ -63,7 +66,9 @@ const Explore = styled.button`
 `;
 
 const Wrapper = styled.div`
-	margin: 50px;
+	margin: 50px 20px;
+
+	${mobile({ margin: "30px 0px" })};
 `;
 
 const Title = styled.h1`
@@ -73,28 +78,75 @@ const Title = styled.h1`
 	font-size: 50px;
 	font-weight: 500;
 	color: #595959;
+
+	${mobile({ fontSize: "30px" })}
+`;
+
+const RoomInformation = styled.div`
+	display: flex;
 `;
 
 const Rooms = styled.div`
-width: 900px
-background: grey;
-display: flex;
-flex-wrap: wrap;
-margin: 30px 130px;
+	display: flex;
+	width: 650px;
+	flex-wrap: wrap;
+	margin: 30px 10px;
+
+	${mobile({ width: "100%", margin: "0px" })}
 `;
+
+const Hover = styled.div`
+	opacity: 0;
+	margin: 10px;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.2);
+	transition: all 0.5s ease;
+	cursor: pointer;
+`;
+
+const Price = styled.h1``;
 
 const ImageContainer = styled.div`
 	height: 200px;
 	width: 300px;
 	margin: 10px;
 	position: relative;
+
+	&:hover ${Hover} {
+		opacity: 1;
+	}
+
+	${mobile({ margin: "20px" })}
+`;
+
+const ImageContainer2 = styled.div`
+	height: 200px;
+	width: 300px;
+	margin: 10px;
+	position: relative;
+
+	&:hover ${Hover} {
+		opacity: 1;
+	}
+
+	${mobile({ display: "none" })}
 `;
 
 const Image1 = styled.img`
-	height: 200px;
-	width: 300px;
+	height: 100%;
+	width: 100%;
 	object-fit: cover;
 	margin: 10px;
+
+	${mobile({ margin: "20px" })}
 `;
 
 const Book = styled.button`
@@ -107,6 +159,13 @@ const Book = styled.button`
 	background: #ffd500;
 	color: white;
 	font-size: 18px;
+
+	&:hover {
+		transform: scale(1.1);
+		transition-duration: ease-in 0.2s;
+	}
+
+	${mobile({ fontSize: "16px", right: "60px", top: "110px" })}
 `;
 
 const BestRoom = styled.div`
@@ -114,6 +173,8 @@ const BestRoom = styled.div`
 	background: #eff4f8;
 	position: realtive;
 	height: 110vh;
+
+	${mobile({ height: "70vh", width: "100%" })}
 `;
 
 const RoomImage = styled.img`
@@ -121,6 +182,14 @@ const RoomImage = styled.img`
 	width: 700px;
 	object-fit: cover;
 	margin: 100px 200px;
+
+	${mobile({
+		height: "200px",
+		width: "100%",
+		margin: "20px 0px 0px 2px",
+		position: "relative",
+		top: "200px",
+	})}
 `;
 
 const Info = styled.div`
@@ -132,15 +201,28 @@ const Info = styled.div`
 	height: 300px;
 	background: white;
 	padding: 10px;
+
+	${mobile({
+		bottom: "30px",
+		left: "0px",
+		bottom: "200px",
+		width: "80%",
+		height: "250px",
+		marginLeft: "20px",
+	})}
 `;
 
 const Tittle = styled.h1`
 	font-weight: 500;
 	margin: 24px 48px;
+
+	${mobile({ margin: "12px 24px", fontSize: "24px" })}
 `;
 
 const Desc = styled.p`
 	margin: 24px 48px;
+
+	${mobile({ margin: "24px 0px" })}
 `;
 
 const BookNow = styled.button`
@@ -150,6 +232,8 @@ const BookNow = styled.button`
 	color: white;
 	background: #ffb700;
 	font-size: 18px;
+
+	${mobile({ fontSize: "14px", padding: "6px 16px" })}
 `;
 
 const Services = styled.div`
@@ -164,16 +248,22 @@ const Main = styled.h1`
 	font-weight: 500;
 	color: #595959;
 	margin-bottom: 24px;
+
+	${mobile({ fontSize: "30px" })}
 `;
 
 const Service = styled.div`
 	display: flex;
 	margin-left: 100px;
+
+	${mobile({ marginLeft: "20px" })}
 `;
 
 const Icons = styled.div`
 	height: 200px;
 	width: 400px;
+
+	${mobile({ height: "100px", width: "200px" })}
 `;
 
 const Icon = styled.img`
@@ -181,6 +271,8 @@ const Icon = styled.img`
 	width: 60px;
 	object-fit: contain;
 	margin-left: 160px;
+
+	${mobile({ marginLeft: "10px", height: "50px", width: "50px" })}
 `;
 
 const Rest = styled.h3`
@@ -190,6 +282,8 @@ const Rest = styled.h3`
 	margin-bottom: 30px;
 	font-weight: 500;
 	color: #8d6700;
+
+	${mobile({ fontSize: "16px", display: "block" })}
 `;
 
 const Descript = styled.p`
@@ -197,21 +291,8 @@ const Descript = styled.p`
 	text-align: center;
 	justify-content: center;
 	color: #595959;
-`;
 
-const MoreInfo = styled.div`
-	display: flex;
-	margin-bottom: 50px;
-`;
-
-const ImageDiv = styled.div`
-	flex: 1;
-`;
-
-const Comfy = styled.img`
-	height: 80vh;
-	width: 700px;
-	object-fit: contain;
+	${mobile({ display: "none" })}
 `;
 
 const InfoContainer = styled.div`
@@ -220,6 +301,8 @@ const InfoContainer = styled.div`
 	color: white;
 	height: 75vh;
 	margin-top: 15px;
+
+	${mobile({ display: "none" })}
 `;
 
 const Heading = styled.h1`
@@ -254,6 +337,8 @@ const FacilitiesTitle = styled.h1`
 	font-weight: 500;
 	color: #595959;
 	margin-bottom: 24px;
+
+	${mobile({ fontSize: "30px" })}
 `;
 
 const Facilities = styled.div`
@@ -267,6 +352,8 @@ const IconInfo = styled.div`
 	height: 100px;
 	width: 300px;
 	margin: 50px 0px;
+
+	${mobile({ margin: "20px 0px", width: "100%", height: "70px" })}
 `;
 
 const IconTitle = styled.h3`
@@ -297,6 +384,8 @@ const GuestHeader = styled.h1`
 	font-weight: 500;
 	color: #595959;
 	margin-bottom: 24px;
+
+	${mobile({ fontSize: "30px" })}
 `;
 
 const GuestSay = styled.p`
@@ -309,6 +398,8 @@ const GuestSay = styled.p`
 	padding: 24px;
 	text-align: center;
 	box-shadow: 2px 3px 5px 5px rgba(0, 0, 0, 0.1);
+
+	${mobile({ margin: "0px 15px", width: "80%" })}
 `;
 
 const GuestDetail = styled.div`
@@ -349,6 +440,8 @@ const VideoImage = styled.img`
 	height: 80vh;
 	width: 100%;
 	object-fit: cover;
+
+	${mobile({ height: "60vh" })}
 `;
 
 const VideoDesc = styled.h1`
@@ -360,12 +453,21 @@ const VideoDesc = styled.h1`
 	font-size: 50px;
 	font-weight: 500;
 	text-align: center;
+
+	${mobile({
+		bottom: "250px",
+		left: "0px",
+		fontSize: "32px",
+		width: "100%",
+	})}
 `;
 
 const OrderFood = styled.div`
 	width: 900px;
 	display: flex;
 	margin: 0px 160px 50px 160px;
+
+	${mobile({ width: "100%", display: "block" })}
 `;
 
 const FoodDetails = styled.div``;
@@ -373,8 +475,10 @@ const FoodDetails = styled.div``;
 const Food = styled.img`
 	height: 300px;
 	width: 300px;
-	object-fit: contain;
+	object-fit: cover;
 	margin: 10px 24px;
+
+	${mobile({ height: "200px", width: "200px", margin: "0px" })}
 `;
 
 const FoodDesc = styled.h3`
@@ -405,7 +509,9 @@ const Home = () => {
 						<Text>Taji Suites</Text>
 						<Text>Regal And Breathtaking.</Text>
 						<Butt>
-							<Explore>EXPLORE</Explore>
+							<Link to="/bookroom" style={{ textDecoration: "none" }}>
+								<Explore>BOOK NOW</Explore>
+							</Link>
 						</Butt>
 					</Texts>
 				</Middle>
@@ -413,47 +519,67 @@ const Home = () => {
 			</Head>
 			<Wrapper>
 				<Title>Our Rooms</Title>
-				<Rooms>
-					<ImageContainer>
-						<Image1 src="/images/image7.jpeg" />
-						<Book>STANDARD ROOM </Book>
-					</ImageContainer>
-					<ImageContainer>
-						<Image1 src="/images/image6.jpeg" />
-						<Book>DELUXE ROOM </Book>
-					</ImageContainer>
-					<ImageContainer>
-						<Image1 src="/images/image7.jpeg" />
-						<Book>STANDARD ROOM </Book>
-					</ImageContainer>
-					<ImageContainer>
-						<Image1 src="/images/image9.jpeg" />
-						<Book>STANDARD ROOM </Book>
-					</ImageContainer>
-					<ImageContainer>
-						<Image1 src="/images/image6.jpeg" />
-						<Book>DELUXE ROOM </Book>
-					</ImageContainer>
-					<ImageContainer>
-						<Image1 src="/images/image9.jpeg" />
-						<Book>STANDARD ROOM </Book>
-					</ImageContainer>
-				</Rooms>
+				<RoomInformation>
+					<Rooms>
+						<ImageContainer>
+							<Image1 src="/images/image7.jpeg" />
+							<Book>STANDARD ROOM </Book>
+							<Hover>
+								<Link to="/bookroom" style={{ textDecoration: "none" }}>
+									<Price>Ksh.2500</Price>
+								</Link>
+							</Hover>
+						</ImageContainer>
+						<ImageContainer>
+							<Image1 src="/images/image6.jpeg" />
+							<Book>DELUXE ROOM </Book>
+							<Hover>
+								<Link to="/bookroom" style={{ textDecoration: "none" }}>
+									<Price>Ksh.3500</Price>
+								</Link>
+							</Hover>
+						</ImageContainer>
+						<ImageContainer2>
+							<Image1 src="/images/image7.jpeg" />
+							<Book>DELUXE ROOM </Book>
+							<Hover>
+								<Link to="/bookroom" style={{ textDecoration: "none" }}>
+									<Price>Ksh.2500</Price>
+								</Link>
+							</Hover>
+						</ImageContainer2>
+						<ImageContainer2>
+							<Image1 src="/images/image7.jpeg" />
+							<Book>STANDARD ROOM </Book>
+							<Hover>
+								<Link to="/bookroom" style={{ textDecoration: "none" }}>
+									<Price>Ksh.2500</Price>
+								</Link>
+							</Hover>
+						</ImageContainer2>
+					</Rooms>
+					<InfoContainer>
+						<Heading>
+							Find Your Best
+							<br /> Room Here
+						</Heading>
+						<InfoDesc>
+							{" "}
+							Enjoy all the luxury and comfort you have come to expect from TAJI
+							Suites Rooms. Designed as an ideal space for work and relaxation
+							alike, but equally useful for those evenings you'd rather relax in
+							your comfortable room.
+						</InfoDesc>
+						<InfoDesc>
+							TAJI Suites offers you affordable, elegant and comfortable
+							accomodation with a unique blend of taste and ambience.
+						</InfoDesc>
+						<Link to="/bookroom" style={{ textDecoration: "none" }}>
+							<InfoButton>Book Now</InfoButton>
+						</Link>
+					</InfoContainer>
+				</RoomInformation>
 			</Wrapper>
-			<BestRoom>
-				<RoomImage src="/images/image9.jpeg" />
-				<Info>
-					<Tittle>
-						Check out your
-						<br /> Best Room.
-					</Tittle>
-					<Desc>
-						TAJI Suites offers you affordable, elegant and comfortable
-						accomodation with a unique blend of taste and ambience.
-					</Desc>
-					<BookNow>Book Now</BookNow>
-				</Info>
-			</BestRoom>
 			<Services>
 				<Main>Our Services</Main>
 				<Service>
@@ -461,7 +587,7 @@ const Home = () => {
 						<Icon src="/images/restaurant.png" />
 						<Rest>Restaurant</Rest>
 						<Descript>
-							Our retaurant delights in authentic African dishes cooked to
+							Our retaurant delights in authentic African cuisines cooked to
 							perfection.
 						</Descript>
 					</Icons>
@@ -483,29 +609,22 @@ const Home = () => {
 					</Icons>
 				</Service>
 			</Services>
-			<MoreInfo>
-				<ImageDiv>
-					<Comfy src="/images/image9.jpeg" />
-				</ImageDiv>
-				<InfoContainer>
-					<Heading>
-						Find Your Best
-						<br /> Room Here
-					</Heading>
-					<InfoDesc>
-						{" "}
-						Enjoy all the luxury and comfort you have come to expect from TAJI
-						Suites Rooms. Designed as an ideal space for work and relaxation
-						alike, but equally useful for those evenings you'd rather relax in
-						your comfortable room.
-					</InfoDesc>
-					<InfoDesc>
+			<BestRoom>
+				<RoomImage src="/images/image9.jpeg" />
+				<Info>
+					<Tittle>
+						Check out your
+						<br /> Best Room.
+					</Tittle>
+					<Desc>
 						TAJI Suites offers you affordable, elegant and comfortable
 						accomodation with a unique blend of taste and ambience.
-					</InfoDesc>
-					<InfoButton>Read More</InfoButton>
-				</InfoContainer>
-			</MoreInfo>
+					</Desc>
+					<Link to="/bookroom" style={{ textDecoration: "none" }}>
+						<BookNow>Book Now</BookNow>
+					</Link>
+				</Info>
+			</BestRoom>
 			<FacilitiesTitle>Facilities</FacilitiesTitle>
 			<Facilities>
 				<IconInfo>
@@ -572,7 +691,10 @@ const Home = () => {
 					</GuestP>
 					<GuestDetails>
 						<GuestName>Purity Akoth</GuestName>
-						<GuestLocation>From Kenya, Kisumu</GuestLocation>
+						<GuestLocation>
+							{" "}
+							<b>Kenya</b>, Kisumu
+						</GuestLocation>
 					</GuestDetails>
 				</GuestDetail>
 			</Testimonials>
@@ -584,20 +706,23 @@ const Home = () => {
 				<FoodDetails>
 					<Food src="/images/food1.jpeg" />
 					<FoodDesc>Ugali, Sukuma + Meat</FoodDesc>
-					<OrderButton>Order Now</OrderButton>
+					<Link to="/order" style={{ textDecoration: "none" }}>
+						<OrderButton>Order Now</OrderButton>
+					</Link>
 				</FoodDetails>
 				<FoodDetails>
-					<Food
-						src="/images/food7.jpeg"
-						style={{ height: "300px", width: "300px", objectFit: "cover" }}
-					/>
-					<FoodDesc>Ugali, Sukuma + Meat</FoodDesc>
-					<OrderButton>Order Now</OrderButton>
+					<Food src="/images/drink3.jpeg" />
+					<FoodDesc>Tusker Lager</FoodDesc>
+					<Link to="/order" style={{ textDecoration: "none" }}>
+						<OrderButton>Order Now</OrderButton>
+					</Link>
 				</FoodDetails>
 				<FoodDetails>
 					<Food src="/images/food2.jpeg" />
-					<FoodDesc>Ugali, Sukuma + Meat</FoodDesc>
-					<OrderButton>Order Now</OrderButton>
+					<FoodDesc>Ugali, Kachumbari + Fish</FoodDesc>
+					<Link to="/order" style={{ textDecoration: "none" }}>
+						<OrderButton>Order Now</OrderButton>
+					</Link>
 				</FoodDetails>
 			</OrderFood>
 			<Footer />

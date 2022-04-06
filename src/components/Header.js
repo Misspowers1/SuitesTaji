@@ -18,9 +18,10 @@ const Logo = styled.div`
 `;
 
 const Image = styled.img`
-	height: 60px;
+	height: 200px;
 	width: 200px;
 	object-fit: contain;
+	margin-top: -65px;
 `;
 
 const Center = styled.div`
@@ -36,6 +37,15 @@ const List = styled.ul`
 	cursor: pointer;
 	color: white;
 	margin: 15px 40px;
+
+	&:hover {
+		transform: scale(1.1);
+		transition-duration: ease-in 0.2s;
+	}
+
+	&:active {
+		text-decoration: underline solid white 5%;
+	}
 `;
 
 const Right = styled.div``;
@@ -62,14 +72,14 @@ const Header = () => {
 					<Link to="/home" style={{ textDecoration: "none" }}>
 						<List>Home</List>
 					</Link>
+					<Link to="/about" style={{ textDecoration: "none" }}>
+						<List>About</List>
+					</Link>
 					<Link to="/bookroom" style={{ textDecoration: "none" }}>
 						<List>Rooms</List>
 					</Link>
 					<Link to="/gallery" style={{ textDecoration: "none" }}>
 						<List>Gallery</List>
-					</Link>
-					<Link to="/about" style={{ textDecoration: "none" }}>
-						<List>About</List>
 					</Link>
 					<Link to="/contact" style={{ textDecoration: "none" }}>
 						<List>Contact us</List>

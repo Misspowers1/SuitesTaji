@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Header from "./Header";
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
 	width: 100%;
@@ -80,15 +81,21 @@ const Slider = () => {
 			<Wrapper slideIndex={slideIndex}>
 				<Slide>
 					<Image src="/images/image9.jpeg" />
-					<Button>BOOK NOW</Button>
+					<Link to="/bookroom" style={{ textDecoration: "none" }}>
+						<Button>BOOK NOW</Button>
+					</Link>
 				</Slide>
 				<Slide>
 					<Image src="/images/food7.jpeg" />
-					<Button>ORDER NOW</Button>
+					<Link to="/order" style={{ textDecoration: "none" }}>
+						<Button>ORDER NOW</Button>
+					</Link>
 				</Slide>
 				<Slide>
 					<Image src="/images/conference.jpeg" />
-					<Button>CONTACT US</Button>
+					<Link to="/contact" style={{ textDecoration: "none" }}>
+						<Button>CONTACT US</Button>
+					</Link>
 				</Slide>
 			</Wrapper>
 			<Arrow direction="right" onClick={() => handleClick("right")}>

@@ -103,7 +103,7 @@ const About = () => {
 					<ServiceImage src="/images/food5.jpeg" />
 					<ServiceTitle>Food</ServiceTitle>
 					<ServiceDesc>
-						TAJI Suites delights in authentic African dishes cooked to
+						TAJI Suites delights in authentic African Cuisines cooked to
 						perfection at an affordable price.Come and enjoy our meals
 						accompanied by any drink of your choice
 					</ServiceDesc>
